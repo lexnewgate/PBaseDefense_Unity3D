@@ -7,7 +7,7 @@ public abstract class ICharacter
 	protected string m_Name = "";				// 名稱
 	
 	protected GameObject m_GameObject = null;	// 顯示的Uniyt模型
-	protected NavMeshAgent m_NavAgent = null;	// 控制角色移動使用
+	protected UnityEngine.AI.NavMeshAgent m_NavAgent = null;	// 控制角色移動使用
 	protected AudioSource  m_Audio	  = null;
 
 	protected string 	m_IconSpriteName = "";	// 顯示Ico
@@ -32,7 +32,7 @@ public abstract class ICharacter
 	public void SetGameObject( GameObject theGameObject )
 	{
 		m_GameObject = theGameObject ;
-		m_NavAgent = m_GameObject.GetComponent<NavMeshAgent>();
+		m_NavAgent = m_GameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
 		m_Audio	= m_GameObject.GetComponent<AudioSource>();
 	}
 
